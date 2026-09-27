@@ -1,16 +1,14 @@
 // ==========================================================================
-// X Exclusive - Main JavaScript Engine
+// Velvet Exclusive - Main JavaScript Engine
 // ==========================================================================
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Application State
   const state = {
-    currentLang: localStorage.getItem("x_exclusive_lang") || "en",
+    currentLang: localStorage.getItem("velvet_exclusive_lang") || "en",
     onlineCount: CONFIG.onlineCounter.baseCount,
-    activeMenu: null // 'lang', 'nav', or null
+    activeMenu: null
   };
 
-  // DOM Elements
   const profilesGrid = document.getElementById("profilesGrid");
   const onlineCountText = document.getElementById("onlineCountText");
   const onlineLabel = document.getElementById("onlineLabel");
@@ -24,30 +22,26 @@ document.addEventListener("DOMContentLoaded", () => {
   const toastMsg = document.getElementById("toastMsg");
   const navHome = document.getElementById("navHome");
   const navProfiles = document.getElementById("navProfiles");
+  const navVip = document.getElementById("navVip");
+  const footerTitle = document.getElementById("footerTitle");
+  const footerText = document.getElementById("footerText");
 
-  // Phone Call / Chat Icon SVG
   const phoneIconSvg = `
     <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
       <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-1.57 1.97c-2.83-1.44-5.15-3.75-6.59-6.59l1.97-1.57c.28-.28.37-.67.25-1.02A11.36 11.36 0 0 1 8.56 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.62c0-.55-.45-1-1-1z"/>
     </svg>
   `;
 
-  // Render Profiles Grid
+  // Render 14 Profile Cards
   function renderProfiles() {
     profilesGrid.innerHTML = "";
     const t = CONFIG.translations[state.currentLang] || CONFIG.translations.en;
+    const testUrl = CONFIG.callChatUrl || "https://www.google.com";
 
     CONFIG.profiles.forEach((profile) => {
       const card = document.createElement("article");
       card.className = "profile-card";
       card.id = `card-${profile.id}`;
-
-      // Build WhatsApp Link
-      const textMsg = CONFIG.defaultMessage.replace("{name}", profile.name);
-      const cleanPhone = (CONFIG.whatsappNumber || "").replace(/[^0-9]/g, "");
-      const waUrl = cleanPhone 
-        ? `https://wa.me/${cleanPhone}?text=${encodeURIComponent(textMsg)}` 
-        : `https://api.whatsapp.com/send?text=${encodeURIComponent(textMsg)}`;
 
       card.innerHTML = `
         <div class="profile-img-wrap">
@@ -65,16 +59,15 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="card-details">
           <h2 class="profile-name">${profile.name}</h2>
           <span class="profile-location">${profile.location}</span>
-          <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="btn-call-chat" data-name="${profile.name}">
+          <a href="${testUrl}" target="_blank" rel="noopener noreferrer" class="btn-call-chat" data-name="${profile.name}">
             ${phoneIconSvg}
             <span>${t.callChatBtn}</span>
           </a>
         </div>
       `;
 
-      // Click animation / toast trigger
       const callBtn = card.querySelector(".btn-call-chat");
-      callBtn.addEventListener("click", (e) => {
+      callBtn.addEventListener("click", () => {
         showToast(t.connectingText);
       });
 
@@ -82,32 +75,32 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Update UI Translations
+  // Update Translations
   function applyLanguage(lang) {
     if (!CONFIG.translations[lang]) lang = "en";
     state.currentLang = lang;
-    localStorage.setItem("x_exclusive_lang", lang);
+    localStorage.setItem("velvet_exclusive_lang", lang);
 
     const t = CONFIG.translations[lang];
 
-    // Update Header Code
     currentLangCode.textContent = t.code;
     onlineLabel.textContent = t.onlineSuffix;
     navHome.textContent = t.menuHome;
     navProfiles.textContent = t.menuProfiles;
+    if (navVip) navVip.textContent = t.menuVip;
+    if (footerTitle) footerTitle.textContent = t.disclaimerTitle;
+    if (footerText) footerText.textContent = t.disclaimerText;
 
-    // Update Dropdown Active State
     document.querySelectorAll(".lang-option").forEach((opt) => {
       opt.classList.toggle("active", opt.dataset.lang === lang);
     });
 
-    // Re-render button texts in profiles
     document.querySelectorAll(".btn-call-chat span").forEach((btnSpan) => {
       btnSpan.textContent = t.callChatBtn;
     });
   }
 
-  // Toast Notification
+  // Toast
   let toastTimer = null;
   function showToast(message) {
     toastMsg.textContent = message;
@@ -115,13 +108,12 @@ document.addEventListener("DOMContentLoaded", () => {
     clearTimeout(toastTimer);
     toastTimer = setTimeout(() => {
       toastNotification.classList.remove("show");
-    }, 2400);
+    }, 2000);
   }
 
-  // Online Counter Animation (subtle fluctuations to look live)
+  // Live online counter fluctuation
   function initLiveCounter() {
     function updateCounterDisplay(num) {
-      // 3-digit format e.g. 056 matching screenshot
       const formatted = String(num).padStart(3, "0");
       onlineCountText.textContent = formatted;
     }
@@ -136,7 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
       
       state.onlineCount = nextCount;
       updateCounterDisplay(state.onlineCount);
-    }, CONFIG.onlineCounter.updateIntervalMs || 5000);
+    }, CONFIG.onlineCounter.updateIntervalMs || 4000);
   }
 
   // Dropdown Manager
@@ -177,7 +169,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Event Listeners
   langToggleBtn.addEventListener("click", (e) => {
     e.stopPropagation();
     toggleLanguageDropdown();
@@ -192,7 +183,6 @@ document.addEventListener("DOMContentLoaded", () => {
     closeAllDropdowns();
   });
 
-  // Language Selection
   document.querySelectorAll(".lang-option").forEach((opt) => {
     opt.addEventListener("click", () => {
       const selectedLang = opt.dataset.lang;
@@ -201,7 +191,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Nav links
   navHome.addEventListener("click", (e) => {
     e.preventDefault();
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -217,12 +206,10 @@ document.addEventListener("DOMContentLoaded", () => {
     closeAllDropdowns();
   });
 
-  // Escape key to close
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeAllDropdowns();
   });
 
-  // Initialize
   renderProfiles();
   applyLanguage(state.currentLang);
   initLiveCounter();
