@@ -1,96 +1,122 @@
-// Website Configuration
-// आप यहाँ अपना WhatsApp नंबर और सेटिंग्स आसानी से बदल सकते हैं
-
+// Velvet Exclusive - Configuration File
 const CONFIG = {
-  // अपना WhatsApp नंबर यहाँ डालें (कंट्री कोड के साथ, बिना '+' या spaces के, जैसे 919876543210 या 14155552671)
-  whatsappNumber: "1234567890", 
+  // Brand details
+  brandName: "Velvet Exclusive",
   
-  // डिफ़ॉल्ट मैसेज जो WhatsApp खुलने पर टाइप हुआ आएगा
-  defaultMessage: "Hi {name}, I saw your profile on X Exclusive and would like to chat!",
+  // Test link for Call | Chat button (as requested: google.com)
+  callChatUrl: "https://www.google.com",
 
-  // लाइव ऑनलाइन यूजर काउंट सेटिंग्स
+  // Live online counter simulation
   onlineCounter: {
-    baseCount: 56,
-    minCount: 48,
-    maxCount: 65,
-    updateIntervalMs: 5000 // हर 5 सेकंड में थोड़ा चेंज होगा
+    baseCount: 62,
+    minCount: 55,
+    maxCount: 72,
+    updateIntervalMs: 4000
   },
 
-  // प्रोफाइल्स डेटा (Same to same as in screenshot)
+  // 14 Complete Model Profiles with realistic locations & local optimized photos
   profiles: [
     {
       id: "nora-jensen",
       name: "Nora Jensen",
       location: "Copenhagen, Denmark",
-      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=700&q=80",
+      image: "images/model_1.jpg",
       online: true
     },
     {
       id: "amelia-clarke",
       name: "Amelia Clarke",
       location: "Sydney, Australia",
-      image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=700&q=80",
+      image: "images/model_2.jpg",
       online: true
     },
     {
       id: "chloe-wilson",
       name: "Chloe Wilson",
       location: "Manchester, UK",
-      image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=700&q=80",
+      image: "images/model_3.jpg",
       online: true
     },
     {
       id: "isabella-rossi",
       name: "Isabella Rossi",
       location: "Milan, Italy",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=700&q=80",
+      image: "images/model_4.jpg",
       online: true
     },
     {
       id: "sofia-martinez",
       name: "Sofia Martinez",
       location: "Madrid, Spain",
-      image: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=700&q=80",
+      image: "images/model_5.jpg",
       online: true
     },
     {
       id: "ava-mitchell",
       name: "Ava Mitchell",
       location: "Los Angeles, USA",
-      image: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=700&q=80",
+      image: "images/model_6.jpg",
       online: true
     },
     {
       id: "mia-anderson",
       name: "Mia Anderson",
       location: "Toronto, Canada",
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=700&q=80",
+      image: "images/model_7.jpg",
       online: true
     },
     {
-      id: "sofia-bennett",
-      name: "Sofia Bennett",
+      id: "sophia-bennett",
+      name: "Sophia Bennett",
       location: "London, UK",
-      image: "https://images.unsplash.com/photo-1516585427167-9f4af9627e6c?auto=format&fit=crop&w=700&q=80",
+      image: "images/model_8.jpg",
       online: true
     },
     {
-      id: "elena-rostova",
-      name: "Elena Rostova",
-      location: "Prague, Czechia",
-      image: "https://images.unsplash.com/photo-1524638431109-9373293c4ea2?auto=format&fit=crop&w=700&q=80",
+      id: "valentina-moretti",
+      name: "Valentina Moretti",
+      location: "Rome, Italy",
+      image: "images/model_9.jpg",
       online: true
     },
     {
       id: "camila-duarte",
       name: "Camila Duarte",
       location: "São Paulo, Brazil",
-      image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=700&q=80",
+      image: "images/model_10.jpg",
+      online: true
+    },
+    {
+      id: "elena-rostova",
+      name: "Elena Rostova",
+      location: "Prague, Czechia",
+      image: "images/model_11.jpg",
+      online: true
+    },
+    {
+      id: "juliette-dubois",
+      name: "Juliette Dubois",
+      location: "Paris, France",
+      image: "images/model_12.jpg",
+      online: true
+    },
+    {
+      id: "hannah-schmidt",
+      name: "Hannah Schmidt",
+      location: "Berlin, Germany",
+      image: "images/model_13.jpg",
+      online: true
+    },
+    {
+      id: "maya-tremblay",
+      name: "Maya Tremblay",
+      location: "Vancouver, Canada",
+      image: "images/model_14.jpg",
       online: true
     }
   ],
 
-  // भाषा अनुवाद (Languages)
+  // Multilingual translations
   translations: {
     en: {
       code: "EN",
@@ -98,7 +124,10 @@ const CONFIG = {
       callChatBtn: "Call | Chat",
       menuHome: "Home",
       menuProfiles: "Profiles",
-      connectingText: "Connecting to WhatsApp..."
+      menuVip: "VIP Club",
+      connectingText: "Redirecting...",
+      disclaimerTitle: "Exclusive Member Community",
+      disclaimerText: "18+ Adults only. All members are verified. Discretion and privacy guaranteed."
     },
     ja: {
       code: "JA",
@@ -106,7 +135,10 @@ const CONFIG = {
       callChatBtn: "通話 | チャット",
       menuHome: "ホーム",
       menuProfiles: "プロフィール",
-      connectingText: "WhatsAppに接続中..."
+      menuVip: "VIPクラブ",
+      connectingText: "リダイレクト中...",
+      disclaimerTitle: "限定会員コミュニティ",
+      disclaimerText: "18歳以上限定。全会員認証済み。プライバシー完全保護。"
     },
     id: {
       code: "ID",
@@ -114,7 +146,10 @@ const CONFIG = {
       callChatBtn: "Telepon | Obrolan",
       menuHome: "Beranda",
       menuProfiles: "Profil",
-      connectingText: "Menghubungkan ke WhatsApp..."
+      menuVip: "Klub VIP",
+      connectingText: "Mengalihkan...",
+      disclaimerTitle: "Komunitas Anggota Eksklusif",
+      disclaimerText: "Khusus dewasa 18+. Semua profil telah diverifikasi. Privasi terjamin."
     },
     fil: {
       code: "FIL",
@@ -122,7 +157,10 @@ const CONFIG = {
       callChatBtn: "Tawag | Chat",
       menuHome: "Home",
       menuProfiles: "Mga Profile",
-      connectingText: "Kumokonekta sa WhatsApp..."
+      menuVip: "VIP Club",
+      connectingText: "Nagre-redirect...",
+      disclaimerTitle: "Eksklusibong Komunidad ng Miyembro",
+      disclaimerText: "18+ Lamang. Lahat ng profile ay beripikado. Garantisado ang privacy."
     }
   }
 };
