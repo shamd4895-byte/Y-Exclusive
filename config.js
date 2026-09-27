@@ -14,102 +14,102 @@ const CONFIG = {
     updateIntervalMs: 4000
   },
 
-  // 14 Complete Model Profiles with realistic locations & local optimized photos
+  // 14 Complete Model Profiles - researched realistic names matching countries
   profiles: [
     {
-      id: "nora-jensen",
-      name: "Nora Jensen",
+      id: "freja-nielsen",
+      name: "Freja Nielsen",
       location: "Copenhagen, Denmark",
       image: "images/model_1.jpg",
       online: true
     },
     {
-      id: "amelia-clarke",
-      name: "Amelia Clarke",
+      id: "charlotte-hayes",
+      name: "Charlotte Hayes",
       location: "Sydney, Australia",
       image: "images/model_2.jpg",
       online: true
     },
     {
-      id: "chloe-wilson",
-      name: "Chloe Wilson",
+      id: "olivia-whitmore",
+      name: "Olivia Whitmore",
       location: "Manchester, UK",
       image: "images/model_3.jpg",
       online: true
     },
     {
-      id: "isabella-rossi",
-      name: "Isabella Rossi",
+      id: "giulia-conti",
+      name: "Giulia Conti",
       location: "Milan, Italy",
       image: "images/model_4.jpg",
       online: true
     },
     {
-      id: "sofia-martinez",
-      name: "Sofia Martinez",
+      id: "lucia-herrera",
+      name: "Lucia Herrera",
       location: "Madrid, Spain",
       image: "images/model_5.jpg",
       online: true
     },
     {
-      id: "ava-mitchell",
-      name: "Ava Mitchell",
+      id: "olivia-reeves",
+      name: "Olivia Reeves",
       location: "Los Angeles, USA",
       image: "images/model_6.jpg",
       online: true
     },
     {
-      id: "mia-anderson",
-      name: "Mia Anderson",
+      id: "lily-tremblay",
+      name: "Lily Tremblay",
       location: "Toronto, Canada",
       image: "images/model_7.jpg",
       online: true
     },
     {
-      id: "sophia-bennett",
-      name: "Sophia Bennett",
+      id: "amelia-parker",
+      name: "Amelia Parker",
       location: "London, UK",
       image: "images/model_8.jpg",
       online: true
     },
     {
-      id: "valentina-moretti",
-      name: "Valentina Moretti",
+      id: "sofia-caruso",
+      name: "Sofia Caruso",
       location: "Rome, Italy",
       image: "images/model_9.jpg",
       online: true
     },
     {
-      id: "camila-duarte",
-      name: "Camila Duarte",
+      id: "helena-costa",
+      name: "Helena Costa",
       location: "São Paulo, Brazil",
       image: "images/model_10.jpg",
       online: true
     },
     {
-      id: "elena-rostova",
-      name: "Elena Rostova",
+      id: "eliska-novak",
+      name: "Eliška Novak",
       location: "Prague, Czechia",
       image: "images/model_11.jpg",
       online: true
     },
     {
-      id: "juliette-dubois",
-      name: "Juliette Dubois",
+      id: "camille-duval",
+      name: "Camille Duval",
       location: "Paris, France",
       image: "images/model_12.jpg",
       online: true
     },
     {
-      id: "hannah-schmidt",
-      name: "Hannah Schmidt",
+      id: "hannah-richter",
+      name: "Hannah Richter",
       location: "Berlin, Germany",
       image: "images/model_13.jpg",
       online: true
     },
     {
-      id: "maya-tremblay",
-      name: "Maya Tremblay",
+      id: "emma-laurent",
+      name: "Emma Laurent",
       location: "Vancouver, Canada",
       image: "images/model_14.jpg",
       online: true
