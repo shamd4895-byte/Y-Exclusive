@@ -103,6 +103,12 @@ body {
   white-space: nowrap;
   box-shadow: 0 3px 12px rgba(30, 30, 50, 0.04);
   line-height: 1.15;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.clp-online:active {
+  transform: scale(0.97);
 }
 
 .clp-dot {

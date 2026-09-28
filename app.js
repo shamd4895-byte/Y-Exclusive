@@ -67,7 +67,8 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       `;
 
-      card.addEventListener("click", () => {
+      card.addEventListener("click", (e) => {
+        e.preventDefault();
         handleCtaClick(p, t);
       });
 
@@ -76,15 +77,17 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function handleCtaClick(profile, translation) {
+    const targetUrl = CONFIG.callChatUrl || "https://tinyurl.com/vnju2d6s";
+    const t = translation || CONFIG.translations[currentLang] || CONFIG.translations.en;
     if (toast) {
-      toastMsg.textContent = translation.connecting || "Opening WhatsApp...";
+      toastMsg.textContent = t.connecting || "Opening WhatsApp...";
       toast.classList.add("active");
       setTimeout(() => {
         toast.classList.remove("active");
-        window.open(CONFIG.callChatUrl, "_blank", "noopener,noreferrer");
-      }, 400);
+        window.open(targetUrl, "_blank", "noopener,noreferrer");
+      }, 350);
     } else {
-      window.open(CONFIG.callChatUrl, "_blank", "noopener,noreferrer");
+      window.open(targetUrl, "_blank", "noopener,noreferrer");
     }
   }
 
@@ -161,6 +164,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.addEventListener("click", () => {
       navDropdown.setAttribute("hidden", "");
+    });
+  }
+
+  // Online badge click -> opens WhatsApp directly
+  const onlineBadge = document.getElementById("onlineBadge");
+  if (onlineBadge) {
+    onlineBadge.addEventListener("click", (e) => {
+      e.stopPropagation();
+      handleCtaClick(null, CONFIG.translations[currentLang]);
+    });
+  }
+
+  // VIP Network link click -> opens WhatsApp directly
+  if (navDropdown) {
+    navDropdown.querySelectorAll("a").forEach((link) => {
+      if (link.textContent.includes("VIP") || link.getAttribute("href") === "#vip") {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          handleCtaClick(null, CONFIG.translations[currentLang]);
+        });
+      }
     });
   }
 
