@@ -4,7 +4,7 @@ const CONFIG = {
   brandName: "X Exclusive",
   logoUrl: "images/logo.webp",
   
-  // Destination link for Call | Chat button (default placeholder or affiliate/chat link)
+  // Destination link for WhatsApp button (affiliate / smartlink / chat url)
   callChatUrl: "https://www.google.com",
 
   // Live online counter simulation
@@ -15,7 +15,7 @@ const CONFIG = {
     updateIntervalMs: 5000
   },
 
-  // Copyright Text (as requested by user)
+  // Copyright Text (clean, no adult text)
   copyrightText: "© 2026 X Exclusive. All copyright rights reserved.",
 
   // 49 Complete Profiles extracted directly from official collection PDF
@@ -519,11 +519,11 @@ const CONFIG = {
       label: "English",
       native: "English",
       onlineSuffix: "Online",
-      callChatBtn: "Call | Chat",
+      callChatBtn: "WhatsApp",
       menuHome: "Home",
       menuProfiles: "Profiles",
       menuVip: "VIP Club",
-      connectingText: "Redirecting to chat...",
+      connectingText: "Opening WhatsApp...",
       priorityCountries: ["DK", "AU", "GB", "IT", "ES", "US", "CA", "FR", "DE", "PH", "ID", "JP"]
     },
     ja: {
@@ -531,11 +531,11 @@ const CONFIG = {
       label: "日本語",
       native: "日本語",
       onlineSuffix: "オンライン",
-      callChatBtn: "Call | Chat",
+      callChatBtn: "WhatsApp",
       menuHome: "ホーム",
       menuProfiles: "プロフィール",
       menuVip: "VIPクラブ",
-      connectingText: "チャットに接続中...",
+      connectingText: "WhatsAppを開いています...",
       priorityCountries: ["JP", "US", "AU", "GB", "DK", "FR", "PH", "ID"]
     },
     id: {
@@ -543,11 +543,11 @@ const CONFIG = {
       label: "Indonesia",
       native: "Bahasa Indonesia",
       onlineSuffix: "Online",
-      callChatBtn: "Call | Chat",
+      callChatBtn: "WhatsApp",
       menuHome: "Beranda",
       menuProfiles: "Profil",
       menuVip: "Klub VIP",
-      connectingText: "Mengalihkan ke obrolan...",
+      connectingText: "Membuka WhatsApp...",
       priorityCountries: ["ID", "PH", "US", "AU", "GB", "DK", "JP"]
     },
     fil: {
@@ -555,11 +555,11 @@ const CONFIG = {
       label: "Philippines",
       native: "Filipino",
       onlineSuffix: "Online",
-      callChatBtn: "Call | Chat",
+      callChatBtn: "WhatsApp",
       menuHome: "Home",
       menuProfiles: "Mga Profile",
       menuVip: "VIP Club",
-      connectingText: "Kumukonekta sa chat...",
+      connectingText: "Binubuksan ang WhatsApp...",
       priorityCountries: ["PH", "US", "AU", "GB", "CA", "ID", "JP"]
     }
   }
