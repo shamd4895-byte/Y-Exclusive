@@ -5,16 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>X Exclusive</title>
   
-  <meta name="description" content="X Exclusive - Discover verified elite profiles, connect, call and chat in a luxury private network.">
+  <meta name="description" content="X Exclusive - Discover verified elite profiles, connect and chat in a luxury private network.">
   <meta name="theme-color" content="#140508">
+  
+  <!-- Cache Control to guarantee immediate updates in all browsers -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
   
   <!-- Preconnect & Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/webp" href="images/logo.webp">
+  <!-- Style with cache-buster query string -->
+  <link rel="stylesheet" href="style.css?v=20260928_v4">
+  <link rel="icon" type="image/webp" href="images/logo.webp?v=20260928_v4">
 </head>
 <body data-theme="rose-red">
   <div class="ambient-glow glow-top"></div>
@@ -26,7 +32,7 @@
       
       <!-- Logo Branding -->
       <a href="#" class="brand-logo" id="logoLink">
-        <img src="images/logo.webp" alt="X Exclusive" class="brand-logo-img" width="38" height="38">
+        <img src="images/logo.webp?v=20260928_v4" alt="X Exclusive" class="brand-logo-img" width="38" height="38">
         <span class="brand-name" id="brandTitle">X Exclusive</span>
       </a>
 
@@ -118,11 +124,11 @@
   <!-- Toast Notification -->
   <div class="toast-notification" id="toastNotification">
     <span class="toast-spinner"></span>
-    <span class="toast-message" id="toastMsg">Connecting...</span>
+    <span class="toast-message" id="toastMsg">Opening WhatsApp...</span>
   </div>
 
-  <!-- Scripts -->
-  <script src="config.js"></script>
-  <script src="app.js"></script>
+  <!-- Scripts with cache-buster query string -->
+  <script src="config.js?v=20260928_v4"></script>
+  <script src="app.js?v=20260928_v4"></script>
 </body>
 </html>
