@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       card.innerHTML = `
         <div class="clp-photo">
-          <img src="${p.image}?v=20260928_v6" alt="${p.name}" ${loadingAttr} onerror="this.onerror=null; this.src='images/card_01.jpg';">
+          <img src="${p.image}?v=20260928_v7" alt="${p.name}" ${loadingAttr} onerror="this.onerror=null; this.src='images/card_01.jpg';">
           <span class="clp-status" title="Online"></span>
         </div>
         <div class="clp-info">
