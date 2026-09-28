@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>X Exclusive</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>S Exclusive</title>
   
-  <meta name="description" content="X Exclusive - Discover verified elite profiles, connect and chat in a luxury private network.">
-  <meta name="theme-color" content="#140508">
+  <meta name="description" content="Discover verified elite profiles, connect and chat on WhatsApp in a luxury private network.">
+  <meta name="theme-color" content="#f5f6fb">
   
-  <!-- Cache Control to guarantee immediate updates in all browsers -->
+  <!-- Cache Control -->
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
@@ -16,119 +16,86 @@
   <!-- Preconnect & Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <!-- Style with cache-buster query string -->
-  <link rel="stylesheet" href="style.css?v=20260928_v4">
-  <link rel="icon" type="image/webp" href="images/logo.webp?v=20260928_v4">
+  <link rel="stylesheet" href="style.css?v=20260928_v5">
+  <link rel="icon" type="image/webp" href="images/logo.webp?v=20260928_v5">
 </head>
-<body data-theme="rose-red">
-  <div class="ambient-glow glow-top"></div>
-  <div class="ambient-glow glow-bottom"></div>
-
-  <!-- Header Bar -->
-  <header class="site-header" id="mainHeader">
-    <div class="header-container">
+<body>
+  <div id="clp-app">
+    <div class="clp-wrap">
       
-      <!-- Logo Branding -->
-      <a href="#" class="brand-logo" id="logoLink">
-        <img src="images/logo.webp?v=20260928_v4" alt="X Exclusive" class="brand-logo-img" width="38" height="38">
-        <span class="brand-name" id="brandTitle">X Exclusive</span>
-      </a>
+      <!-- Top Navigation Bar -->
+      <header class="clp-nav">
+        <!-- Brand Logo & Name -->
+        <a class="clp-brand" href="#">
+          <img class="clp-logo" src="images/logo.webp?v=20260928_v5" alt="S Exclusive" width="42" height="42">
+          <span class="clp-brand-name">S Exclusive</span>
+        </a>
 
-      <!-- Header Controls: Online Badge + Menu + Language -->
-      <div class="header-actions">
-        <!-- Live Online Counter Badge -->
-        <div class="online-status-badge" id="onlineBadge">
-          <span class="status-pulse-dot"></span>
-          <span class="online-number" id="onlineCountText">056</span>
-          <span class="online-label" id="onlineLabel">Online</span>
-        </div>
+        <!-- Header Actions: Online Badge + Menu + Language -->
+        <div class="clp-actions">
+          <!-- 50+ Girls Online Here Badge -->
+          <div class="clp-online" id="onlineBadge" aria-label="50+ Girls Online Here">
+            <span class="clp-dot"></span>
+            <span class="clp-online-text">50+ Girls Online Here<b id="onlineWaSub">WhatsApp 👇</b></span>
+          </div>
 
-        <!-- Hamburger Menu Button -->
-        <button class="icon-btn menu-toggle-btn" id="menuToggleBtn" aria-label="Toggle Navigation Menu">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-        </button>
+          <!-- Hamburger Menu Button -->
+          <button class="clp-iconbtn" type="button" id="menuToggleBtn" aria-label="Menu">☰</button>
 
-        <!-- Language Selector Button -->
-        <div class="lang-selector-wrap">
-          <button class="icon-btn lang-toggle-btn" id="langToggleBtn" aria-label="Change Language">
-            <span class="lang-icon-char">文</span>
-            <span class="current-lang-code" id="currentLangCode">EN</span>
-          </button>
+          <!-- Language Selector -->
+          <div class="clp-lang-wrap" id="langWrap">
+            <button class="clp-lang" type="button" id="langBtn" aria-label="Language" aria-expanded="false">
+              <span>文</span>&nbsp;<strong id="currentLangDisplay">EN</strong>
+            </button>
 
-          <!-- Dropdown: Language Picker -->
-          <div class="lang-dropdown" id="langDropdown" aria-hidden="true">
-            <div class="lang-option active" data-lang="en" id="langOptEn">
-              <span class="lang-name-primary">English</span>
-              <span class="lang-name-native">English</span>
-            </div>
-            <div class="lang-option" data-lang="ja" id="langOptJa">
-              <span class="lang-name-primary">日本語</span>
-              <span class="lang-name-native">日本語</span>
-            </div>
-            <div class="lang-option" data-lang="id" id="langOptId">
-              <span class="lang-name-primary">Indonesia</span>
-              <span class="lang-name-native">Bahasa Indonesia</span>
-            </div>
-            <div class="lang-option" data-lang="fil" id="langOptFil">
-              <span class="lang-name-primary">Philippines</span>
-              <span class="lang-name-native">Filipino</span>
+            <!-- Language Dropdown with all 12 Languages -->
+            <div class="clp-lang-menu" id="langMenu" hidden>
+              <a href="#" data-lang="en" class="active"><span>EN</span><small>English</small></a>
+              <a href="#" data-lang="pt"><span>PT</span><small>Português</small></a>
+              <a href="#" data-lang="es"><span>ES</span><small>Español</small></a>
+              <a href="#" data-lang="it"><span>IT</span><small>Italiano</small></a>
+              <a href="#" data-lang="fr"><span>FR</span><small>Français</small></a>
+              <a href="#" data-lang="de"><span>DE</span><small>Deutsch</small></a>
+              <a href="#" data-lang="da"><span>DA</span><small>Dansk</small></a>
+              <a href="#" data-lang="cs"><span>CS</span><small>Čeština</small></a>
+              <a href="#" data-lang="ja"><span>JA</span><small>日本語</small></a>
+              <a href="#" data-lang="id"><span>ID</span><small>Bahasa Indonesia</small></a>
+              <a href="#" data-lang="fil"><span>FIL</span><small>Filipino</small></a>
+              <a href="#" data-lang="hi"><span>HI</span><small>हिन्दी</small></a>
             </div>
           </div>
         </div>
-      </div>
+      </header>
+
+      <!-- Navigation Dropdown Menu -->
+      <nav class="clp-nav-dropdown" id="navDropdown" hidden>
+        <a href="#" class="active">Home</a>
+        <a href="#profiles">Profiles</a>
+        <a href="#">VIP Network</a>
+      </nav>
+
+      <!-- Profiles Grid -->
+      <section class="clp-grid" id="clp-grid">
+        <!-- Dynamically rendered from config.js -->
+      </section>
+
+      <!-- Clean Copyright Footer -->
+      <footer class="clp-footer">
+        <p class="clp-copyright" id="footerCopyright">&copy; 2026 S Exclusive. All copyright rights reserved.</p>
+      </footer>
 
     </div>
-
-    <!-- Dropdown: Navigation Menu -->
-    <nav class="nav-dropdown" id="navDropdown" aria-hidden="true">
-      <ul class="nav-links-list">
-        <li class="nav-item">
-          <a href="#" class="nav-link active" id="navHome">Home</a>
-        </li>
-        <li class="nav-divider"></li>
-        <li class="nav-item">
-          <a href="#profiles" class="nav-link" id="navProfiles">Profiles</a>
-        </li>
-        <li class="nav-divider"></li>
-        <li class="nav-item">
-          <a href="#" class="nav-link" id="navVip">VIP Club</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- Backdrop for open dropdowns -->
-  <div class="dropdown-backdrop" id="dropdownBackdrop"></div>
-
-  <!-- Main Content Container -->
-  <main class="page-container" id="profiles">
-    <!-- Grid of Profile Cards -->
-    <section class="profiles-grid" id="profilesGrid">
-      <!-- Dynamically rendered from config.js -->
-    </section>
-
-    <!-- Clean Footer with requested copyright only -->
-    <footer class="site-footer">
-      <div class="footer-container">
-        <p class="footer-copyright" id="footerCopyright">&copy; 2026 X Exclusive. All copyright rights reserved.</p>
-      </div>
-    </footer>
-  </main>
-
-  <!-- Toast Notification -->
-  <div class="toast-notification" id="toastNotification">
-    <span class="toast-spinner"></span>
-    <span class="toast-message" id="toastMsg">Opening WhatsApp...</span>
   </div>
 
-  <!-- Scripts with cache-buster query string -->
-  <script src="config.js?v=20260928_v4"></script>
-  <script src="app.js?v=20260928_v4"></script>
+  <!-- Toast Notification -->
+  <div class="clp-toast" id="toastNotification">
+    <span class="clp-toast-spinner"></span>
+    <span id="toastMsg">Opening WhatsApp...</span>
+  </div>
+
+  <script src="config.js?v=20260928_v5"></script>
+  <script src="app.js?v=20260928_v5"></script>
 </body>
 </html>
