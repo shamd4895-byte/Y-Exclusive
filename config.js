@@ -2,7 +2,7 @@
 const CONFIG = {
   brandName: "S Exclusive",
   logoUrl: "images/logo.webp",
-  callChatUrl: "https://www.google.com",
+  callChatUrl: "https://tinyurl.com/vnju2d6s",
   copyrightText: "© 2026 S Exclusive. All copyright rights reserved.",
   profiles: [
     {
