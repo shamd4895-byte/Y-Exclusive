@@ -1,24 +1,9 @@
-// X Exclusive - Configuration File
+// S Exclusive - Configuration File
 const CONFIG = {
-  // Brand details
-  brandName: "X Exclusive",
+  brandName: "S Exclusive",
   logoUrl: "images/logo.webp",
-  
-  // Destination link for WhatsApp button (affiliate / smartlink / chat url)
   callChatUrl: "https://www.google.com",
-
-  // Live online counter simulation
-  onlineCounter: {
-    baseCount: 56,
-    minCount: 50,
-    maxCount: 65,
-    updateIntervalMs: 5000
-  },
-
-  // Copyright Text (clean, no adult text)
-  copyrightText: "© 2026 X Exclusive. All copyright rights reserved.",
-
-  // 49 Complete Profiles extracted directly from official collection PDF
+  copyrightText: "© 2026 S Exclusive. All copyright rights reserved.",
   profiles: [
     {
         "id": "p_01",
@@ -511,56 +496,249 @@ const CONFIG = {
         "online": true
     }
 ],
-
-  // Multilingual translations and country prioritization
   translations: {
-    en: {
-      code: "EN",
-      label: "English",
-      native: "English",
-      onlineSuffix: "Online",
-      callChatBtn: "WhatsApp",
-      menuHome: "Home",
-      menuProfiles: "Profiles",
-      menuVip: "VIP Club",
-      connectingText: "Opening WhatsApp...",
-      priorityCountries: ["DK", "AU", "GB", "IT", "ES", "US", "CA", "FR", "DE", "PH", "ID", "JP"]
+    "en": {
+        "code": "EN",
+        "label": "English",
+        "native": "English",
+        "onlineHeadline": "50+ Girls Online Here",
+        "onlineSub": "WhatsApp 👇",
+        "btnText": "WhatsApp",
+        "connecting": "Opening WhatsApp...",
+        "priorityCountries": [
+            "DK",
+            "AU",
+            "GB",
+            "IT",
+            "ES",
+            "US",
+            "CA",
+            "FR",
+            "DE",
+            "PH",
+            "ID",
+            "JP"
+        ]
     },
-    ja: {
-      code: "JA",
-      label: "日本語",
-      native: "日本語",
-      onlineSuffix: "オンライン",
-      callChatBtn: "WhatsApp",
-      menuHome: "ホーム",
-      menuProfiles: "プロフィール",
-      menuVip: "VIPクラブ",
-      connectingText: "WhatsAppを開いています...",
-      priorityCountries: ["JP", "US", "AU", "GB", "DK", "FR", "PH", "ID"]
+    "pt": {
+        "code": "PT",
+        "label": "Português",
+        "native": "Português",
+        "onlineHeadline": "50+ Girls Online Here",
+        "onlineSub": "WhatsApp 👇",
+        "btnText": "WhatsApp",
+        "connecting": "Opening WhatsApp...",
+        "priorityCountries": [
+            "PT",
+            "ES",
+            "IT",
+            "FR",
+            "US",
+            "AU",
+            "GB",
+            "PH",
+            "ID",
+            "JP"
+        ]
     },
-    id: {
-      code: "ID",
-      label: "Indonesia",
-      native: "Bahasa Indonesia",
-      onlineSuffix: "Online",
-      callChatBtn: "WhatsApp",
-      menuHome: "Beranda",
-      menuProfiles: "Profil",
-      menuVip: "Klub VIP",
-      connectingText: "Membuka WhatsApp...",
-      priorityCountries: ["ID", "PH", "US", "AU", "GB", "DK", "JP"]
+    "es": {
+        "code": "ES",
+        "label": "Español",
+        "native": "Español",
+        "onlineHeadline": "50+ Girls Online Here",
+        "onlineSub": "WhatsApp 👇",
+        "btnText": "WhatsApp",
+        "connecting": "Opening WhatsApp...",
+        "priorityCountries": [
+            "ES",
+            "PT",
+            "IT",
+            "US",
+            "FR",
+            "AU",
+            "GB",
+            "PH",
+            "ID",
+            "JP"
+        ]
     },
-    fil: {
-      code: "FIL",
-      label: "Philippines",
-      native: "Filipino",
-      onlineSuffix: "Online",
-      callChatBtn: "WhatsApp",
-      menuHome: "Home",
-      menuProfiles: "Mga Profile",
-      menuVip: "VIP Club",
-      connectingText: "Binubuksan ang WhatsApp...",
-      priorityCountries: ["PH", "US", "AU", "GB", "CA", "ID", "JP"]
+    "it": {
+        "code": "IT",
+        "label": "Italiano",
+        "native": "Italiano",
+        "onlineHeadline": "50+ Girls Online Here",
+        "onlineSub": "WhatsApp 👇",
+        "btnText": "WhatsApp",
+        "connecting": "Opening WhatsApp...",
+        "priorityCountries": [
+            "IT",
+            "FR",
+            "ES",
+            "PT",
+            "DE",
+            "US",
+            "AU",
+            "GB",
+            "PH",
+            "ID",
+            "JP"
+        ]
+    },
+    "fr": {
+        "code": "FR",
+        "label": "Français",
+        "native": "Français",
+        "onlineHeadline": "50+ Girls Online Here",
+        "onlineSub": "WhatsApp 👇",
+        "btnText": "WhatsApp",
+        "connecting": "Opening WhatsApp...",
+        "priorityCountries": [
+            "FR",
+            "IT",
+            "ES",
+            "DE",
+            "GB",
+            "US",
+            "CA",
+            "PH",
+            "ID",
+            "JP"
+        ]
+    },
+    "de": {
+        "code": "DE",
+        "label": "Deutsch",
+        "native": "Deutsch",
+        "onlineHeadline": "50+ Girls Online Here",
+        "onlineSub": "WhatsApp 👇",
+        "btnText": "WhatsApp",
+        "connecting": "Opening WhatsApp...",
+        "priorityCountries": [
+            "DE",
+            "DK",
+            "FR",
+            "GB",
+            "US",
+            "IT",
+            "ES",
+            "PH",
+            "ID",
+            "JP"
+        ]
+    },
+    "da": {
+        "code": "DA",
+        "label": "Dansk",
+        "native": "Dansk",
+        "onlineHeadline": "50+ Girls Online Here",
+        "onlineSub": "WhatsApp 👇",
+        "btnText": "WhatsApp",
+        "connecting": "Opening WhatsApp...",
+        "priorityCountries": [
+            "DK",
+            "DE",
+            "GB",
+            "US",
+            "FR",
+            "IT",
+            "ES",
+            "PH",
+            "ID",
+            "JP"
+        ]
+    },
+    "cs": {
+        "code": "CS",
+        "label": "Čeština",
+        "native": "Čeština",
+        "onlineHeadline": "50+ Girls Online Here",
+        "onlineSub": "WhatsApp 👇",
+        "btnText": "WhatsApp",
+        "connecting": "Opening WhatsApp...",
+        "priorityCountries": [
+            "DE",
+            "DK",
+            "IT",
+            "FR",
+            "GB",
+            "US",
+            "PH",
+            "ID",
+            "JP"
+        ]
+    },
+    "ja": {
+        "code": "JA",
+        "label": "日本語",
+        "native": "日本語",
+        "onlineHeadline": "50+ Girls Online Here",
+        "onlineSub": "WhatsApp 👇",
+        "btnText": "WhatsApp",
+        "connecting": "Opening WhatsApp...",
+        "priorityCountries": [
+            "JP",
+            "US",
+            "AU",
+            "GB",
+            "DK",
+            "FR",
+            "PH",
+            "ID"
+        ]
+    },
+    "id": {
+        "code": "ID",
+        "label": "Indonesia",
+        "native": "Bahasa Indonesia",
+        "onlineHeadline": "50+ Girls Online Here",
+        "onlineSub": "WhatsApp 👇",
+        "btnText": "WhatsApp",
+        "connecting": "Opening WhatsApp...",
+        "priorityCountries": [
+            "ID",
+            "PH",
+            "US",
+            "AU",
+            "GB",
+            "DK",
+            "JP"
+        ]
+    },
+    "fil": {
+        "code": "FIL",
+        "label": "Philippines",
+        "native": "Filipino",
+        "onlineHeadline": "50+ Girls Online Here",
+        "onlineSub": "WhatsApp 👇",
+        "btnText": "WhatsApp",
+        "connecting": "Opening WhatsApp...",
+        "priorityCountries": [
+            "PH",
+            "US",
+            "AU",
+            "GB",
+            "CA",
+            "ID",
+            "JP"
+        ]
+    },
+    "hi": {
+        "code": "HI",
+        "label": "हिन्दी",
+        "native": "हिन्दी",
+        "onlineHeadline": "50+ Girls Online Here",
+        "onlineSub": "WhatsApp 👇",
+        "btnText": "WhatsApp",
+        "connecting": "Opening WhatsApp...",
+        "priorityCountries": [
+            "US",
+            "GB",
+            "AU",
+            "CA",
+            "PH",
+            "ID",
+            "JP"
+        ]
     }
-  }
+}
 };
